@@ -1,15 +1,9 @@
-Click Examples
+#!/usr/bin/env python3
+"""
+Example demonstrating a new CLI feature with verbose output.
+This shows how Click can handle different output modes.
+"""
 
-  This folder contains various Click examples.  Note that
-  all of these are not runnable by themselves but should be
-  installed into a virtualenv.
-
-
-## Enhanced Example with Verbose Mode
-
-Click also supports advanced features like verbose output:
-
-```python
 import click
 
 @click.command()
@@ -21,21 +15,16 @@ def greet_with_verbose(count, name, verbose):
     if verbose:
         click.echo(f"Starting greeting process for {name}")
         click.echo(f"Will greet {count} time(s)")
+        click.echo("=" * 40)
     
     for i in range(count):
         if verbose:
             click.echo(f"Greeting {i+1}/{count}: ", nl=False)
         click.echo(f"Hello, {name}!")
+    
+    if verbose:
+        click.echo("=" * 40)
+        click.echo("Greeting process completed")
 
 if __name__ == '__main__':
     greet_with_verbose()
-```
-
-```bash
-$ python greet_with_verbose.py --verbose --count=3
-Your name: Click
-Starting greeting process for Click
-Will greet 3 time(s)
-Greeting 1/3: Hello, Click!
-Greeting 2/3: Hello, Click!
-Greeting 3/3: Hello, Click!
