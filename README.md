@@ -17,6 +17,26 @@ Click in three points:
 -   Automatic help page generation
 -   Supports lazy loading of subcommands at runtime
 
+## 🚀 New in Click 8.4: Interactive CLI Builder
+
+Click now includes a revolutionary **Interactive CLI Builder** that provides a user-friendly interface for creating Click commands with real-time feedback, validation, and code generation.
+
+```python
+from click.interactive_builder import interactive_builder
+
+# Start the interactive builder
+interactive_builder()
+```
+
+**Features:**
+- 🎯 **Interactive command creation** with guided prompts
+- 🏗️ **Real-time validation** and error checking
+- 📝 **Automatic code generation** with syntax highlighting
+- 💾 **Project saving/loading** for collaboration
+- 🔍 **Command validation** and best practices checking
+
+Learn more: [Interactive Builder Documentation](examples/interactive_builder/README.md)
+
 
 ## A Simple Example
 

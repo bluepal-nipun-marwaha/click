@@ -70,6 +70,11 @@ from .utils import get_binary_stream as get_binary_stream
 from .utils import get_text_stream as get_text_stream
 from .utils import open_file as open_file
 
+# Interactive CLI Builder - New in Click 8.4
+from .interactive_builder import interactive_builder as interactive_builder
+from .interactive_builder import CommandBuilder as CommandBuilder
+from .interactive_builder import InteractiveCLIBuilder as InteractiveCLIBuilder
+
 
 def __getattr__(name: str) -> object:
     import warnings
